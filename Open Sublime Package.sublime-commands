@@ -1,0 +1,6 @@
+[
+  {
+    "caption": "Open Sublime Package: Open Package",
+    "command": "open_package"
+  }
+]
