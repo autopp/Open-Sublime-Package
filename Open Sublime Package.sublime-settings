@@ -1,0 +1,14 @@
+{
+  /*
+  "extraction_path": "/path/to/extraction"
+  */
+ 
+  // If you share package by Dropbox, you can use different path deppending on host name
+  /*
+  "extraction_path": {
+    "home_pc_name": "D:/Users/autopp/extraction_dir",
+    "office_pc_name": "/home/autopp/extraction_dir",
+    "<default>": "C:/Tmp"
+  }
+  */
+}
