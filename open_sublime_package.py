@@ -36,7 +36,7 @@ class OpenPackageCommand(sublime_plugin.WindowCommand):
       # case of Installed Packages
       package_file_name = self.installed_packages_list[i]
       package_name = os.path.splitext(package_file_name)[0]
-      package_file_name = sublime.installed_packages_path() + '/' + package_name
+      package_file_name = sublime.installed_packages_path() + '/' + package_file_name
       
       # Installed Packagesなら設定ファイルにあるディレクトリに解凍
       settings = sublime.load_settings("Open Sublime Package.sublime-settings")
@@ -71,14 +71,14 @@ class OpenPackageCommand(sublime_plugin.WindowCommand):
       
       # Extract zip file
       
-      with zipfile.Zipfile(package_file_name) as zf:
+      with zipfile.ZipFile(package_file_name) as zf:
         zf.extractall(extraction_path)
       
       package_path = extraction_path
     else:
       # case of Packages
       package_name = self.packages_list[i - len(self.installed_packages_list)]
-      package_path = sublime.packages_path() + '/' + package_name
+      package_path = sublime.packages_path() + '\\' + package_name
     
     # Open package
     open_folder(package_path)
